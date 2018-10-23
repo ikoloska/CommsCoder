@@ -1,7 +1,7 @@
 # Communication-Autoencoder
 Reimagining autoencoders as communication systems. 
 
-## Communication Systems Revisited 
+## Communication Systems Overview 
 In essence, any communication system is comprised of a transmitter, a channel and a receiver.
 
 ![thinformation_1](https://user-images.githubusercontent.com/44330120/47397268-3c277180-d77a-11e8-8972-03cf41fc416d.jpg)
@@ -16,6 +16,8 @@ in n discrete uses of the channel. To this end, the transmiter generates a lower
 <a href="https://www.codecogs.com/eqnedit.php?latex=$k&space;=&space;\log_2&space;M$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$k&space;=&space;\log_2&space;M$" title="$k = \log_2 M$" /></a>.
 
 The transmiter imposes an energy constraint on the message T (per bit, or on average), and the message T is then transmitted over the channel. The channel is corrupted by Gaussian noise. The ratio between the input energy and the power of the Gaussian noise is called the signal-to-noise ratio (SNR). As a result of the channel noise, the receiver receives a distorted version of the message T, denoted by T'. The receiver generates a higher level representation of message T' (i.e., converts the message T' with size n to a message S' with size M) and decodes the transmitted message. 
+
+## Communication Systems Revisited 
 
 This project, mimics a communication system with an autoencoder in TensorFlow. Autoencoders are neural networks that aim to copy their input to the output, by placing the input as a target label. The input layer, of size M, is a one-hot representation of the message S. The first hidden layer, of size n, creates a lower level representation of S. The output of this hidden layer is then corrupted by Gaussian noise and is used as an input to the second hiddel layer of size n. The output layer, of size M, is a higher level representation of hidden layer 2. The decoded message is found as argmax(output layer).
 
