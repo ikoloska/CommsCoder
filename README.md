@@ -1,4 +1,4 @@
-# *Communication-Autoencoder*
+# *CommsCoder*
 <p align="center">
 Reimagining autoencoders as communication systems. 
 </p>
