@@ -1,6 +1,8 @@
 # Communication-Autoencoder
+<p align="center">
 Reimagining autoencoders as communication systems. 
-
+</p>
+ 
 ## Communication Systems Overview 
 In essence, any communication system is comprised of a transmitter, a channel and a receiver.
 
@@ -9,11 +11,15 @@ In essence, any communication system is comprised of a transmitter, a channel an
 Mathematically, any communication system can be discribed by using the following formalism. The transmitter wants to transmit a uniformly chosen message 
 S, such that 
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=$S&space;\in&space;\mathcal{M}&space;=&space;\{1,....,M\}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$S&space;\in&space;\mathcal{M}&space;=&space;\{1,....,M\}$" title="$S \in \mathcal{M} = \{1,....,M\}$" /></a>,
+ </p>
 
 in n discrete uses of the channel. To this end, the transmiter generates a lower level representation of message S (i.e., converts the message S with size M to a message T with size n). The communication rate of the system is R = k/n [bits per channel use], where 
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=$k&space;=&space;\log_2&space;M$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$k&space;=&space;\log_2&space;M$" title="$k = \log_2 M$" /></a>.
+</p>
 
 The transmiter imposes a power constraint on the message T (per bit, or on average), and the message T is then transmitted over the channel. The channel is corrupted by Gaussian noise. The ratio between the input power and the power of the Gaussian noise is called the signal-to-noise ratio (SNR). As a result of the channel noise, the receiver receives a distorted version of the message T, denoted by T'. The receiver generates a higher level representation of message T' (i.e., converts the message T' with size n to a message S' with size M) and decodes the transmitted message. 
 
