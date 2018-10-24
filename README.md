@@ -1,6 +1,6 @@
 # *CommsCoder*
 <p align="center">
-Reimagining autoencoders as communication systems. 
+Depicts autoencoders as end-to-end communication systems. 
 </p>
  
 ## Communication Systems Overview 
