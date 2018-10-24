@@ -4,24 +4,24 @@ Reimagining autoencoders as communication systems.
 </p>
  
 ## Communication Systems Overview 
-In essence, any communication system is comprised of a transmitter, a channel and a receiver.
+In essence, any communication system is comprised of a source of information, a transmitter, a channel, a receiver and a destination.
 
-![thinformation_1](https://user-images.githubusercontent.com/44330120/47397268-3c277180-d77a-11e8-8972-03cf41fc416d.jpg)
+![thinformation_1](https://user-images.githubusercontent.com/44330120/47400146-a98dcf00-d787-11e8-9675-75763431f109.jpg)
 
-Mathematically, any communication system can be discribed by using the following formalism. The transmitter wants to transmit a uniformly chosen message 
+Mathematically, any communication system can be discribed by using the following formalism. The source of information, Bob, wants to transmit a uniformly chosen message 
 **S**, such that 
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=$S&space;\in&space;\mathcal{M}&space;=&space;\{1,....,M\}$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$S&space;\in&space;\mathcal{M}&space;=&space;\{1,....,M\}$" title="$S \in \mathcal{M} = \{1,....,M\}$" /></a>,
  </p>
 
-in **n** discrete uses of the channel. To this end, the transmiter generates a lower level representation of message **S** (i.e., converts the message **S** of size **M** to a message **T** of size n). The communication rate of the system is **R = k/n** [bits per channel use], where 
+in **n** discrete uses of the channel. To this end, a transmiter operates on the message to create a signal suitable for transmission and it generates a lower level representation of message **S** (i.e., converts the message **S** of size **M** to a message **T** of size n). As a result, the communication rate of the message is **R = k/n** [bits per channel use], where 
 
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=$k&space;=&space;\log_2&space;M$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$k&space;=&space;\log_2&space;M$" title="$k = \log_2 M$" /></a>.
 </p>
 
-The transmiter imposes a power constraint on the message **T** (per bit, or on average), and the message **T** is then transmitted over the channel. The channel is corrupted by Gaussian noise. The ratio between the input power and the power of the Gaussian noise is called the signal-to-noise ratio (SNR). As a result of the channel noise, the receiver receives a distorted version of the message **T**, denoted by **T'**. The receiver generates a higher level representation of message **T'** (i.e., converts the message **T'** of size **n** to a message **S'** of size **M**) and decodes the transmitted message. 
+The transmiter imposes a power constraint on the message **T** (per bit, or on average), and the message **T** is then transmitted over the channel. The channel is the transmission medium and it is corrupted by Gaussian noise. The ratio between the input power and the power of the Gaussian noise is called the signal-to-noise ratio (SNR). As a result of the channel noise, the receiver receives a distorted version of the message **T**, denoted by **T'**. The receiver operates on the received message and generates a higher level representation of message **T'** (i.e., converts the message **T'** of size **n** to a message **S'** of size **M**). The destination, Alice, then decodes the transmitted message. 
 
 ## Communication Systems Revisited 
 
@@ -39,10 +39,6 @@ The code requires:
 * Numpy
 
 `$ pip install numpy`
-
-* Matplotlib
-
-`$ pip install -U matplotlib`
 
 ## Further reading
 Check out http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf for further info on communication systems, and http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/ for a very good and concise explination on autoencoders. 
