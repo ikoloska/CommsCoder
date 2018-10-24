@@ -25,12 +25,24 @@ The transmiter imposes a power constraint on the message **T** (per bit, or on a
 
 ## Communication Systems Revisited 
 
-This project, mimics a communication system with an autoencoder in TensorFlow. Autoencoders are neural networks that aim to copy their input to the output, by placing the input as a target label. The input layer, of size **M**, is a one-hot representation of the uniformly chosen message **S**. The first hidden layer, of size **n**, creates a lower level representation of **S**. The output of this hidden layer is then corrupted by Gaussian noise and is used as an input to the second hiddel layer of size **n**. The output layer, of size **M**, is a higher level representation of hidden layer 2. The decoded message is found as argmax(output layer).
+This project mimics a communication system with an autoencoder in TensorFlow. Autoencoders are neural networks that aim to copy their input to the output, by placing the input as a target label. The input layer, of size **M**, is a one-hot representation of the uniformly chosen message **S**. The first hidden layer, of size **n**, creates a lower level representation of **S**. The output of this hidden layer is then corrupted by Gaussian noise and is used as an input to the second hiddel layer of size **n**. The output layer, of size **M**, is a higher level representation of hidden layer 2. The decoded message is found as argmax(output layer).
 
 The adopted metric is the bit-error-rate (BER), which quantifies how many bits of the one-hot representation of the output message differ from the one-hot representation of the input message. For higher SNR the BER is lower, and conversly, lower SNR means higher BER. For high enough SNR, the BER should be zero.
 
 ## Prerequisites 
-The code requires TensorFlow and numpy.
+The code requires:
+
+* TensorFlow
+
+`$ pip install TensorFlow`
+
+* Numpy
+
+`$ pip install numpy`
+
+* Matplotlib
+
+`$ pip install -U matplotlib`
 
 ## Further reading
 Check out http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf for further info on communication systems, and http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/ for a very good and concise explination on autoencoders. 
