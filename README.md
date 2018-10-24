@@ -15,7 +15,7 @@ in n discrete uses of the channel. To this end, the transmiter generates a lower
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=$k&space;=&space;\log_2&space;M$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$k&space;=&space;\log_2&space;M$" title="$k = \log_2 M$" /></a>.
 
-The transmiter imposes an energy constraint on the message T (per bit, or on average), and the message T is then transmitted over the channel. The channel is corrupted by Gaussian noise. The ratio between the input energy and the power of the Gaussian noise is called the signal-to-noise ratio (SNR). As a result of the channel noise, the receiver receives a distorted version of the message T, denoted by T'. The receiver generates a higher level representation of message T' (i.e., converts the message T' with size n to a message S' with size M) and decodes the transmitted message. 
+The transmiter imposes a power constraint on the message T (per bit, or on average), and the message T is then transmitted over the channel. The channel is corrupted by Gaussian noise. The ratio between the input power and the power of the Gaussian noise is called the signal-to-noise ratio (SNR). As a result of the channel noise, the receiver receives a distorted version of the message T, denoted by T'. The receiver generates a higher level representation of message T' (i.e., converts the message T' with size n to a message S' with size M) and decodes the transmitted message. 
 
 ## Communication Systems Revisited 
 
