@@ -29,7 +29,7 @@ This project mimics a communication system with an autoencoder in TensorFlow.
 
 ![thinformation_nn_v1](https://user-images.githubusercontent.com/44330120/47535971-825f0b00-d909-11e8-8c5c-0c85e36913c7.jpg)
 
-The input layer, of size **M**, is a one-hot representation of the uniformly chosen message **S**. The first hidden layer, of size **n**, creates a lower level representation of **S**. The output of this hidden layer is then corrupted by Gaussian noise and is used as an input to the second hiddel layer of size **n**. The output layer, of size **M**, is a higher level representation of hidden layer 2. The decoded message is found as argmax(output layer).
+The input layer of the autoencoder is of size **M**, and it takes in a one-hot representation of the uniformly chosen message **S**. The first hidden layer, of size **n**, creates a lower level representation of **S**. The output of this hidden layer is then corrupted by Gaussian noise and is used as an input to the second hiddel layer of size **n**. The output layer, of size **M**, is a higher level representation of hidden layer 2. The decoded message is found as argmax(output layer).
 
 The adopted metric is the bit-error-rate (BER), which quantifies how many bits of the one-hot representation of the output message differ from the one-hot representation of the input message. For higher SNR the BER is lower, and conversly, lower SNR means higher BER. For high enough SNR, the BER should be zero.
 
